@@ -11,3 +11,10 @@ RuboCop::RakeTask.new(:rubocop)
 YARD::Rake::YardocTask.new
 
 task default: %i(spec rubocop yard)
+
+namespace :docker do
+  desc 'Build a fresh docker image'
+  task :build do
+    exec 'docker build -t authify/worker .'
+  end
+end
