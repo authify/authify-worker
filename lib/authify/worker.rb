@@ -17,5 +17,8 @@ module Authify
   end
 end
 
+redis_config = Authify::Worker::CONFIG[:redis]
+Resque.redis = "#{redis_config[:host]}:#{redis_config[:port]}"
+
 # Internal Requirements
 require 'authify/worker/version'
