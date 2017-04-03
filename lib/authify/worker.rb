@@ -1,4 +1,5 @@
 # External Requirements
+require 'resque'
 require 'authify/core'
 require 'authify/core/jobs/email'
 
