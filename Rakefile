@@ -9,7 +9,7 @@ RSpec::Core::RakeTask.new(:spec)
 RuboCop::RakeTask.new(:rubocop)
 YARD::Rake::YardocTask.new
 
-task default: %i(spec rubocop yard)
+task default: %i[spec rubocop yard]
 
 namespace :docker do
   desc 'Build a fresh docker image'
